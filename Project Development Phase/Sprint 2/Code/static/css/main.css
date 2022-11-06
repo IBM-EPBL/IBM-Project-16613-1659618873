@@ -1,0 +1,32 @@
+#title {
+    color: #3b5768;
+    font-weight: 900;
+    letter-spacing: 2.5px;
+}
+
+.content {
+    margin: 5%;
+}
+
+.content h1 {
+    text-align: center;
+}
+
+.paragraph1 {
+    padding-top: 1.5%;
+    line-height: 30px;
+    text-indent: 30px;
+    font-size: 20px;
+    padding-bottom: 1.5%;
+}
+
+.bullet {
+    line-height: 30px;
+    font-size: 20px;
+}
+
+.image {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
