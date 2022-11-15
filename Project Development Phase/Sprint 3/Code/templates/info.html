@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classsification Of Arrhythmia using ECG</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/main.css')}}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="icon" type="image/x-icon" href="{{url_for('static', filename='images/favicon.ico')}}">
+</head>
+
+<body style="font-family: ui-monospace; background-color: #dbdee1;">
+    <nav class="navbar navbar-expand-lg" style="background-color: #D3EBCD;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="{{url_for('about')}}"><span id="title"> TEAM BBCA </span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation" style="border: var(--bs-border-width) solid rgb(255 255 255 / 10%);">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup" style="flex-direction: row-reverse;">
+                <div class="navbar-nav">
+                    <a class="nav-link active" aria-current="page" href="{{url_for('about')}}">HOME</a>
+                    <a class="nav-link" href="{{url_for('info')}}">MORE INFO</a>
+                    <a class="nav-link" href="{{url_for('predict')}}">PREDICT</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="content">
+        <h1>Electrocardiography (ECG)</h1>
+        <div class="image">
+            <img src="{{url_for('static', filename='images/ecg.png')}}" alt="" width="500px" height="500px">
+        </div>
+        <p class="paragraph1">
+            An electrocardiogram (ECG) is a simple test that can be used to check your heart's rhythm and electrical activity. Sensors attached to the skin are used to detect the electrical signals produced by your heart each time it beats. These signals are recorded
+            by a machine and are looked at by a doctor to see if they're unusual. An ECG may be requested by a heart specialist (cardiologist) or any doctor who thinks you might have a problem with your heart, including your GP. The test can be carried
+            out by a specially trained healthcare professional at a hospital, a clinic or at your GP surgery. Despite having a similar name, an ECG isn't the same as an echocardiogram, which is a scan of the heart
+        </p>
+        <h1>When is an ECG is used?</h1>
+        <p class="paragraph1">
+            An ECG is often used alongside other tests to help diagnose and monitor conditions affecting the heart. It can be used to investigate symptoms of a possible heart problem, such as chest pain, palpitations (suddenly noticeable heartbeats), dizziness and
+            shortness of breath. An ECG can help detect:
+        </p>
+        <ul class="bullet">
+            <li>
+                Arrhythmias - Where the heart beats too slowly, too quickly, or irregularly.
+            </li>
+            <li>
+                Coronary Heart Disease - Where the heart's blood supply is blocked or interrupted by a build-up of fatty substances.
+            </li>
+            <li>
+                Heart Attacks - Where the supply of blood to the heart is suddenly blocked.
+            </li>
+            <li>
+                Cardiomyopathy - Where the heart walls become thickened or enlarged.
+            </li>
+        </ul>
+        <p class="paragraph1">
+            A series of ECGs can also be taken over time to monitor a person already diagnosed with a heart condition or taking medication known to potentially affect the heart.
+        </p>
+        <h1>Normal ECG</h1>
+        <div class="image">
+            <img src="{{url_for('static', filename='images/Normal_ECG.bmp')}}" alt="" height="300px" width="300px">
+        </div>
+        <p class="paragraph1">
+            A normal ECG is illustrated above. Note that the heart is beating in a regular sinus rhythm between 60 - 100 beats per minute (specifically 82 bpm). All the important intervals on this recording are within normal ranges.
+        </p>
+        <h1>Abnormal ECG</h1>
+        <div class="image">
+            <img src="{{url_for('static', filename='images/abnormal_ecg.png')}}" alt="" height="300px" width="300px">
+        </div>
+        <p class="paragraph1">
+            Electrocardiographic abnormalities include first-degree heart block, right and left bundle branch block, premature atrial and ventricular contractions.
+        </p>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+</body>
+
+</html>
