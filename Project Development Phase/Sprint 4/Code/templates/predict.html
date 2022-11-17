@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classsification Of Arrhythmia using ECG</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/main.css')}}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/x-icon" href="{{url_for('static', filename='images/favicon.ico')}}">
+</head>
+
+<body style="font-family: ui-monospace; background-color: #dbdee1;">
+    <nav class="navbar navbar-expand-lg" style="background-color: #D3EBCD;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="{{url_for('about')}}"><span id="title"> TEAM BBCA </span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation" style="border: var(--bs-border-width) solid rgb(255 255 255 / 10%);">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup" style="flex-direction: row-reverse;">
+                <div class="navbar-nav">
+                    <a class="nav-link" aria-current="page" href="{{url_for('about')}}">HOME</a>
+                    <a class="nav-link" href="{{url_for('info')}}">MORE INFO</a>
+                    <a class="nav-link active" href="{{url_for('predict')}}">PREDICT</a>
+                    <a class="nav-link" href="{{url_for('login')}}"><i class="fa fa-sign-out" style="font-size:24px"></i></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="content">
+        <h1>Prediction Of Arrhythmia Using ECG</h1>
+        <div class="image">
+            <img src="{{url_for('static', filename='images/predict_ecg.jpg')}}" alt="" width="500px" height="300px">
+        </div>
+        <h1 style="margin: 20px;">Prediction</h1>
+        <p style="text-align: center;">
+            <form action="{{url_for('results')}}" method="post" style="text-align:center;" id="predictionForm" enctype="multipart/form-data">
+                <b>UPLOAD IMAGE HERE:</b>
+                <span style="margin-left: 30px;">
+                    <input type="file" name="inputImage" required accept="image/x-png,image/gif,image/jpeg">
+                </span>
+                <button type="submit" form="predictionForm" class="btn btn-outline-dark submitBtn">GET RESULTS!</button>
+            </form>
+        </p>
+        <p class="paragraph1">
+            A popular deep learning architecture, namely the Convolutional Neural Network (CNN) was employed. The model is trained upon ECG signal images from the following 5 categories:
+        </p>
+        <ul>
+            <li class="bullet">
+                Left Bundle Branch Block
+            </li>
+            <li class="bullet">
+                Normal
+            </li>
+            <li class="bullet">
+                Premature Atrial Contraction
+            </li>
+            <li class="bullet">
+                Premature Ventricular Contractions
+            </li>
+            <li class="bullet">
+                Right Bundle Branch Block
+            </li>
+            <li class="bullet">
+                Ventricular Fibrillation
+            </li>
+
+        </ul>
+        <p class="paragraph1">
+            Once the model is trained and tuned, it can then be used for the predicting the disease by taking in as input a completely new unseen image of the signal!
+        </p>
+
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+</body>
+
+</html>
