@@ -64,6 +64,7 @@ def check_user(username, password):
 
 
 app = Flask(__name__)
+upload_path  = 'static/uploads'
 
 app.secret_key = "r@nd0mSk_1"
 
